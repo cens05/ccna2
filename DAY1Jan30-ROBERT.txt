@@ -202,7 +202,7 @@ ephone-dn 9
 ephone-dn 10
   number 8191	
 Ephone 1
-  Mac-address 6CFA.8972.ECBF
+  Mac-address ccd8.c1fb.14c9
   type 8945
   button 1:1 2:3 3:2 4:9
   restart
