@@ -1,0 +1,50 @@
+
+conf t	
+router bgp 1
+bgp log-neighbor-changes
+neighbor 209.9.9.3 remote-as 3
+neighbor 207.7.7.2 remote-as 2
+neighbor 208.8.8.4 remote-as 45
+network 209.9.9.0 mask 255.255.255.0
+network 207.7.7.0 mask 255.255.255.0
+network 208.8.8.0 mask 255.255.255.0
+network 10.1.1.0 mask 255.255.255.252
+
+
+****SITE TO SITE VPN***
+@VPNJP
+config t
+no logging console
+no ip domain lookup
+int gi 1
+ip add 200.0.0.10 255.255.255.0
+no shut
+int gi 3
+ip add 10.10.10.1 255.255.255.0
+no shut
+ip route 0.0.0.0 0.0.0.0 200.0.0.20
+end
+
+@VPNPH
+config t
+no logging console
+no ip domain lookup
+int gi 1
+ip add 200.0.0.20 255.255.255.0
+no shut
+int gi 3
+ip add 10.20.20.1 255.255.255.0
+no shut
+ip route 0.0.0.0 0.0.0.0 200.0.0.10
+end
+
+
+
+@BLDGJP
+sudo ifconfig eht0 10.10.10.10 netmask 255.255.255.0 up
+sudo route add default gw 10.10.10.1
+
+
+@BLDGPH
+sudo ifconfig eht0 10.20.20.20 netmask 255.255.255.0 up
+sudo route add default gw 10.20.20.1
