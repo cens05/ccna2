@@ -1,0 +1,142 @@
+TASK 1: MASTERING OSI LAYER
+
+1. Electical
+	V - voltage
+2. FOC - Fiber Optic 850 / 1310 nm
+	I - interface
+3. RF - Radio Frequency
+
+
+
+@COREbaba
+
+**Gives cisco username & password
+
+conf t
+username admin privilege 15 secret pass
+line vty 0 14
+login local
+	
+
+**HACKING GAME
+
+username: anong kinain mo last night?
+pass: college school
+wait 3 secs
+
+username: fave color
+pass:crush mo sa college
+
+u: admin
+p: pass
+
+
+
+TASK 2: CONFIGURING ENCRYPTION IN CISCO
+
+conf t
+!give private key to cisco using name
+ip domain-name rivanit.com
+crypto key generate rsa
+ip ssh version 2
+
+TASK 3: How do you know if you are hacked?
+
+LEARN THREE WAY HANDSHAKE
+
+nmap -v 50.6.160.131
+
+
+TASK 4: HOW TO ATTACK UNPROTECTED PC
+
+netbios attack
+net use \\10.22.1.10\ipc$
+netstat -s -p tcp
+
+
+How to attack port 445
+opening victim drive c remotely
+net use h: \\10.22.1.10\c$
+
+***Filter wireshark via source
+
+config t
+NO ip access-list standard kontiKAMI1
+ip access-list standard kontiKAMI1
+DENY 10.12.0.0 0.0.255.255
+DENY 10.22.0.0 0.0.255.255
+DENY 10.32.0.0 0.0.255.255
+DENY 10.42.0.0 0.0.255.255
+DENY 10.11.0.0 0.0.255.255
+DENY 10.21.0.0 0.0.255.255
+DENY 10.31.0.0 0.0.255.255
+DENY 10.41.0.0 0.0.255.255
+DENY 10.52.0.0 0.0.255.255
+DENY 10.62.0.0 0.0.255.255
+DENY 10.72.0.0 0.0.255.255
+DENY 10.82.0.0 0.0.255.255
+Permit Any
+Int Gi 0/0/1
+ no ip access-group kontiKAMI1 in
+ end
+
+
+TASK 4: CONFIGURING FIREWALLS
+Top 5 FIREWALLS/NGFW:
+
+1. Palo Alto
+2. Checkpoint
+3. Cisco Firepower
+4. SonicWall
+5. Fortinet
+
+TASK 5: How to be a highly paid network Engieer:
+have some system skills!
+
+dsn server:
+7 DNSenteries to be legit:
+ns, ___, www, smtp, pop, imap, MX
+
+web server:
+ftp server:
+ntp server:
+
+
+How to install DNS & WEB Server in servers:
+
+@cmd
+powershell
+Install-WindowsFeature -name dns -includeManagementTools
+Install-WindowsFeature -name web-server -includeManagementTools
+
+
+TASK 6: CREATING FAKE LEGIT BUSINESS EMAIL:
+sendMail: need smtp
+getMail: you pop
+get/send: imap
+
+gcash@kimstoreM.com
+maya@kimstoreM.com
+
+gcash@lazadaM.com
+maya@lazadaM.com
+
+
+***Special nmap
+
+nmap -Pn -v www.web8.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
