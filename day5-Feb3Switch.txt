@@ -229,10 +229,10 @@ TASK11: Multiple instance STP: 802.1s
 step1: sync all Vlans with VTP:vlanTrunkingProtocol:
 TAAS/BABA: d1/d2:
 config t
-vtp domain ccna
-vtp password pass
-vtp mode server
-vtp version 2
+no vtp domain ccna
+no vtp password pass
+no vtp mode server
+no vtp version 2
 exit
 
 a1/a2: access SW
