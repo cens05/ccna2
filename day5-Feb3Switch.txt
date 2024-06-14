@@ -37,7 +37,7 @@ config t
 ipv6 unicast-routing
 int giga 2
  no shutdown
- ipv6 add dada:dada:fafa:fafa::/64 EUI-64
+ ipv6 add fede:cacc:baba:b1b0::/64 EUI-64
  do sh ipv6 int brief
 end
 
@@ -55,7 +55,7 @@ Method3: STatic IPv6 address manual:
 config t
 ipv6 unicast-routing
 int giga 2
- ipv6 add FACE:CAFE:ACED:DACE::FFFF/64
+ ipv6 add AABB:CDCD:B3B3:D3D3::CA05/64
  do sh ipv6 int brief
 end
 
@@ -94,7 +94,7 @@ TASK3: EXPENSIVE SWITCH/MANAGEABLE SWITCH:\ = 20k
 COREbaba12#sh mac address-table
 
 TASK4: Mastering the Switch BUttons:
-Mode Button: jailBreak/Password Forget
+Mode Button: jailBreak/Password Forget/Factory Reset
 Poweroff, Press Mode, until
 Switch:  flash_init
 	 delete flash:config.text
